@@ -7,7 +7,7 @@ uploaded_file = st.file_uploader(
     type=["xlsx", "xls"]
 )
 
-if uploaded_file:
+if uploaded_file is not None:
     st.success("Upload successful")
     st.write(uploaded_file.name)
     st.write(uploaded_file.size)
